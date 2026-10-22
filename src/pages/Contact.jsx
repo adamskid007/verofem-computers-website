@@ -16,7 +16,6 @@ import "./Contact.css";
 
 const CONTACT_DETAILS = {
   address: "Head office - 308 Abaranje road, Wazobia Bus-stop, Ikotun, Lagos state, Nigeria.",
-  address2: "Branch office - 3, Chukwuemeka Ehidioha street, off Supo Ajayi, Igando/Isheri Expressway Igando, Lagos State, Nigeria.",
   phone: "08134719727",
   phone2: "08068228784",
   email: "info@verofemcomputers.com",
@@ -197,8 +196,6 @@ function Contact() {
               </span>
               <h3>Visit us</h3>
               <p>{CONTACT_DETAILS.address}</p>
-              <br />
-              <p>{CONTACT_DETAILS.address2}</p>
               <span className="contact-detail-card__note">
                 Our business location
               </span>

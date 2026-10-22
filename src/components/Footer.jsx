@@ -96,11 +96,6 @@ function Footer() {
             </li>
 
             <li className="footer__contact-item">
-              <MapPin size={18} />
-              <span>Branch office - 3, Chukwuemeka Ehidioha street, off Supo Ajayi, Igando/Isheri Expressway Igando, Lagos State, Nigeria.</span>
-            </li>
-
-            <li className="footer__contact-item">
               <Phone size={18} />
               <span>+234 813 471 9727</span>
             </li>
