@@ -107,7 +107,7 @@ function Footer() {
 
             <li className="footer__contact-item">
               <Mail size={18} />
-              <span>info@verofemcomputers.com</span>
+              <span>info@verofemcomputers.com.ng</span>
             </li>
           </ul>
 

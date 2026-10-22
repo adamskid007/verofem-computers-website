@@ -18,7 +18,7 @@ const CONTACT_DETAILS = {
   address: "Head office - 308 Abaranje road, Wazobia Bus-stop, Ikotun, Lagos state, Nigeria.",
   phone: "08134719727",
   phone2: "08068228784",
-  email: "info@verofemcomputers.com",
+  email: "info@verofemcomputers.com.ng",
 };
 
 const WHATSAPP_NUMBER = "2348134719727";
