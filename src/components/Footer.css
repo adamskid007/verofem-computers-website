@@ -1,0 +1,259 @@
+
+/* ========================================
+   VEROFEM COMPUTERS FOOTER
+======================================== */
+
+.footer {
+  margin-top: auto;
+  color: #d7d4cc;
+  background-color: var(--color-black);
+}
+
+/* Main footer layout */
+
+.footer__main {
+  display: grid;
+  grid-template-columns: 1.35fr 0.8fr 1fr 1.25fr;
+  gap: 42px;
+  padding-top: 76px;
+  padding-bottom: 64px;
+}
+
+/* Brand */
+
+.footer__brand-column {
+  max-width: 320px;
+}
+
+.footer__brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 22px;
+}
+
+.footer__logo-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 46px;
+  height: 46px;
+  flex-shrink: 0;
+  color: var(--color-gold);
+  border-radius: var(--radius-small);
+}
+
+.footer__brand-name {
+  color: var(--color-gold-light);
+  font-size: 16px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  line-height: 1.5;
+}
+
+.footer__brand-name span {
+  color: var(--color-white);
+  font-weight: 500;
+}
+
+.footer__description {
+  margin-bottom: 20px;
+  color: #bdb9b0;
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+.footer__tagline {
+  margin-bottom: 0;
+  color: var(--color-gold-light);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+/* Footer columns */
+
+.footer__column {
+  min-width: 0;
+}
+
+.footer__heading {
+  position: relative;
+  margin-bottom: 26px;
+  padding-bottom: 13px;
+  color: var(--color-white);
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.footer__heading::after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 38px;
+  height: 2px;
+  background-color: var(--color-gold);
+  content: "";
+}
+
+.footer__list,
+.footer__contact-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.footer__list li,
+.footer__contact-list li {
+  margin: 0;
+  padding: 0;
+}
+
+.footer__link {
+  display: inline-flex;
+  align-items: flex-start;
+  gap: 8px;
+  color: #bdb9b0;
+  font-size: 13px;
+  line-height: 1.7;
+  transition:
+    color var(--transition-fast),
+    transform var(--transition-fast);
+}
+
+.footer__link svg {
+  flex-shrink: 0;
+  margin-top: 4px;
+  color: var(--color-gold);
+}
+
+.footer__link:hover {
+  color: var(--color-gold-light);
+  transform: translateX(3px);
+}
+
+/* Contact column */
+
+.footer__contact-intro {
+  margin-bottom: 20px;
+  color: #bdb9b0;
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+.footer__contact-list {
+  gap: 16px;
+}
+
+.footer__contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  color: #bdb9b0;
+  font-size: 12px;
+  line-height: 1.8;
+  overflow-wrap: anywhere;
+}
+
+.footer__contact-item svg {
+  flex-shrink: 0;
+  margin-top: 4px;
+  color: var(--color-gold);
+}
+
+.footer__logo-icon img {
+    background-color: black;
+    border-radius: 50%;
+    border: 0;
+}
+
+.footer__contact-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 24px;
+  padding-bottom: 5px;
+  color: var(--color-gold-light);
+  border-bottom: 1px solid rgba(201, 163, 74, 0.5);
+  font-size: 13px;
+  font-weight: 600;
+  transition:
+    color var(--transition-fast),
+    border-color var(--transition-fast);
+}
+
+.footer__contact-cta:hover {
+  color: var(--color-white);
+  border-color: var(--color-gold-light);
+}
+
+/* Copyright strip */
+
+.footer__bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer__bottom-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  min-height: 76px;
+  padding-block: 20px;
+}
+
+.footer__bottom-inner p {
+  margin: 0;
+  color: #918d85;
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+.footer__bottom-note {
+  text-align: right;
+}
+
+/* Responsive layouts */
+
+@media (max-width: 1050px) {
+  .footer__main {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 48px;
+    row-gap: 44px;
+  }
+
+  .footer__brand-column {
+    max-width: 360px;
+  }
+}
+
+@media (max-width: 600px) {
+  .footer__main {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 38px;
+    padding-top: 54px;
+    padding-bottom: 46px;
+  }
+
+  .footer__brand-column {
+    max-width: 100%;
+  }
+
+  .footer__heading {
+    margin-bottom: 20px;
+  }
+
+  .footer__bottom-inner {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 8px;
+    padding-block: 20px;
+  }
+
+  .footer__bottom-note {
+    text-align: left;
+  }
+}

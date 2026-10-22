@@ -1,0 +1,243 @@
+
+/* ========================================
+   VEROFEM COMPUTERS
+   Global Design System
+======================================== */
+
+:root {
+  /* Brand colours */
+  --color-black: #101010;
+  --color-black-soft: #181818;
+  --color-black-light: #222222;
+
+  --color-gold: #c9a34a;
+  --color-gold-light: #e1c477;
+  --color-gold-dark: #a98432;
+
+  /* Background colours */
+  --color-ivory: #faf8f2;
+  --color-white: #ffffff;
+  --color-surface: #f1eee6;
+
+  /* Text colours */
+  --color-text: #252525;
+  --color-text-muted: #6d6a63;
+  --color-text-light: #bdb9b0;
+
+  /* Borders and shadows */
+  --color-border: #e6e0d4;
+  --shadow-soft: 0 8px 30px rgba(16, 16, 16, 0.07);
+  --shadow-card: 0 14px 40px rgba(16, 16, 16, 0.1);
+
+  /* Typography */
+  --font-primary: "Inter", Arial, sans-serif;
+
+  /* Layout */
+  --container-width: 1200px;
+  --container-padding: 24px;
+  --navbar-height: 82px;
+
+  /* Spacing */
+  --section-space: 96px;
+  --section-space-small: 64px;
+
+  /* Borders */
+  --radius-small: 6px;
+  --radius-medium: 12px;
+  --radius-large: 20px;
+  --radius-pill: 999px;
+
+  /* Transitions */
+  --transition-fast: 0.2s ease;
+  --transition-normal: 0.3s ease;
+}
+
+/* ========================================
+   RESET
+======================================== */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: var(--navbar-height);
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background-color: var(--color-ivory);
+  color: var(--color-text);
+  font-family: var(--font-primary);
+  font-size: 16px;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body,
+button,
+input,
+textarea,
+select {
+  font-family: var(--font-primary);
+}
+
+button,
+input,
+textarea,
+select {
+  font-size: inherit;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img,
+picture,
+video,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+img {
+  height: auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-top: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--color-black);
+  line-height: 1.2;
+  font-weight: 700;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+ul,
+ol {
+  padding-left: 1.5rem;
+}
+
+::selection {
+  background-color: var(--color-gold);
+  color: var(--color-black);
+}
+
+/* ========================================
+   SHARED LAYOUT UTILITIES
+======================================== */
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  width: 100%;
+  max-width: var(--container-width);
+  margin-inline: auto;
+  padding-inline: var(--container-padding);
+}
+
+.section {
+  padding-block: var(--section-space);
+}
+
+.section--light {
+  background-color: var(--color-ivory);
+}
+
+.section--white {
+  background-color: var(--color-white);
+}
+
+.section--dark {
+  background-color: var(--color-black);
+  color: var(--color-white);
+}
+
+.section--dark h1,
+.section--dark h2,
+.section--dark h3,
+.section--dark h4 {
+  color: var(--color-white);
+}
+
+/* ========================================
+   ACCESSIBILITY
+======================================== */
+
+:focus-visible {
+  outline: 3px solid var(--color-gold);
+  outline-offset: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* ========================================
+   RESPONSIVE GLOBAL SETTINGS
+======================================== */
+
+@media (max-width: 768px) {
+  :root {
+    --container-padding: 20px;
+    --section-space: 68px;
+    --section-space-small: 48px;
+    --navbar-height: 72px;
+  }
+}
+
+@media (max-width: 480px) {
+  :root {
+    --container-padding: 16px;
+    --section-space: 56px;
+    --section-space-small: 40px;
+  }
+
+  body {
+    font-size: 15px;
+  }
+}
